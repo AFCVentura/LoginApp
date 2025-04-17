@@ -7,9 +7,21 @@
             InitializeComponent();
         }
 
-        protected override Window CreateWindow(IActivationState? activationState)
+
+        // Code to define the default size of the screen
+        protected override Window CreateWindow(IActivationState activationState)
         {
-            return new Window(new AppShell());
+            var window = new Window(new AppShell())
+            {
+                Width = 400,
+                Height = 700
+            };
+
+            return window;
         }
+
+
+
+
     }
 }
